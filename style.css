@@ -1,0 +1,105 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+.card {
+    margin: 0 auto;
+    border: 1px transparent;
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 300px;
+    vertical-align: middle;
+    background-color: hsl(216, 50%, 16%);
+    box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.50);
+}
+
+.card__photo {
+    background-image: url('images/image-equilibrium.jpg');
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 12px;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.card__photo:hover::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%,0.4);
+    background-image: url('images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.card--link {
+    color: white;
+    text-decoration: none;
+}
+
+.card__title {
+    margin: 15px;
+}
+
+.card--link:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+.card__description {
+    color: hsl(217, 12%, 59%);
+    font-weight: lighter;
+    margin: auto 15px;
+}
+
+.card__items {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.card--price {
+    vertical-align: top;
+    color: hsl(178, 100%, 50%);
+}
+
+.card--time {
+    vertical-align: top;
+    color: hsl(217, 12%, 59%);
+}
+
+.card--divCreator {
+    border-top: 1px solid hsl(217, 12%, 59%);
+    padding: 20px 0;
+    margin: auto 15px;
+}
+
+.card__creatorImg {
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.card__creator {
+    position: relative;
+    bottom: 10px;
+    margin: 10px;
+    color: white;
+}
